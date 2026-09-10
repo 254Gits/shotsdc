@@ -5,7 +5,7 @@ import os
 
 # --- App Configuration ---
 st.set_page_config(page_title="Ukaya Shot Tracker", layout="centered")
-st.title("⚽ SAFARICOM CHAPA DIMBA CENTRAL REGION FINALS: Shot Map")
+st.title("SAFARICOM CHAPA DIMBA NYANZA REGION FINALS: Shot Map")
 
 # --- Goal Dimensions & Config ---
 left_post = 41.0
