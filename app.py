@@ -50,6 +50,7 @@ st.sidebar.header("Record New Shot")
 
 team_name = st.sidebar.selectbox("Select Team", ["AWENDO FOOTBALL ACADEMY", "INDOMITABLE LION", "SAMETA HIGHSCHOOL"])
 player_name = st.sidebar.text_input("Player Name", value="Player")
+player_pos = st.sidebar.text_input("Player Position", value = "position")
 jersey_no = st.sidebar.text_input("Jersey Number", value="10")
 
 x_val = st.sidebar.slider("Pitch Width (X)", min_value=37.0, max_value=52.65, value=44.8, step=0.05)
@@ -70,7 +71,7 @@ if st.sidebar.button("Save Shot"):
     # Save clean dataset to disk
     st.session_state.shot_df.to_csv(CSV_FILE, index=False)
     
-    st.sidebar.success(f"Recorded: [{team_name}] #{jersey_no} {player_name} - {status}")
+    st.sidebar.success(f"Recorded: [{team_name}] #{jersey_no} {player_name} {player_pos} - {status}")
     st.rerun()
 
 # --- Reset Action ---
