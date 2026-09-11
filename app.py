@@ -12,7 +12,7 @@ left_post = 41.0
 right_post = 48.65
 crossbar_height = 2.47
 CSV_FILE = "chapa_dimba_shot_data.csv"
-HEADERS = ["Team", "Player Name", "Jersey No", "X", "Y", "Result"]
+HEADERS = ["Team", "Player Name", "Position", "Jersey No", "X", "Y", "Result"]
 
 # --- Helper Function to Clean Data ---
 def sanitize_dataframe(df):
@@ -50,7 +50,7 @@ st.sidebar.header("Record New Shot")
 
 team_name = st.sidebar.selectbox("Select Team", ["AWENDO FOOTBALL ACADEMY", "INDOMITABLE LION", "SAMETA HIGHSCHOOL"])
 player_name = st.sidebar.text_input("Player Name", value="Player")
-player_pos = st.sidebar.text_input("Player Position", value = "position")
+player_pos = st.sidebar.text_input("Player Position", value = "Position")
 jersey_no = st.sidebar.text_input("Jersey Number", value="10")
 
 x_val = st.sidebar.slider("Pitch Width (X)", min_value=37.0, max_value=52.65, value=44.8, step=0.05)
@@ -62,7 +62,7 @@ status = "Goal" if is_goal else "Miss"
 
 # --- Save Action ---
 if st.sidebar.button("Save Shot"):
-    new_entry = pd.DataFrame([[team_name, player_name, jersey_no, x_val, y_val, status]], columns=HEADERS)
+    new_entry = pd.DataFrame([[team_name, player_name, player_pos, jersey_no, x_val, y_val, status]], columns=HEADERS)
     
     # Append & sanitize session data
     st.session_state.shot_df = pd.concat([st.session_state.shot_df, new_entry], ignore_index=True)
