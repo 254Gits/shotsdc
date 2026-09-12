@@ -48,7 +48,7 @@ if "shot_df" not in st.session_state:
 # --- Sidebar Inputs ---
 st.sidebar.header("Record New Shot")
 
-team_name = st.sidebar.selectbox("Select Team", ["PLATEAU QUEENS", "MASOSA STARLETS", "HEDSO QUEENS", "OTENDO COMPREHENSIVE", "AWENDO FOOTBALL ACADEMY", "KENDU MUSLIM", "OBUNGA FC", "INDOMITABLE SOLDIERS"])
+team_name = st.sidebar.selectbox("Select Team", ["PLATEAU QUEENS", "MASOSA STARLETS", "HEDSO QUEENS", "OTENDO COMPREHENSIVE", "AWENDO FOOTBALL ACADEMY", "KENDU MUSLIM", "OBUNGA FC", "INDOMITABLE SOLDIERS."])
 player_name = st.sidebar.text_input("Player Name", value="Player")
 player_pos = st.sidebar.text_input("Player Position", value = "Position")
 jersey_no = st.sidebar.text_input("Jersey Number", value="10")
