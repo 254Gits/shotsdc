@@ -58,7 +58,7 @@ y_val = st.sidebar.slider("Goal Height (Y)", min_value=-0.5, max_value=3.5, valu
 
 # Determine Goal vs Miss
 is_goal = (left_post <= x_val <= right_post) and (0 <= y_val <= crossbar_height)
-status = "Goal" if is_goal else "Miss"
+status = "On Target" if is_goal else "Miss"
 
 # --- Save Action ---
 if st.sidebar.button("Save Shot"):
