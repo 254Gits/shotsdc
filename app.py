@@ -5,7 +5,7 @@ import os
 
 # --- App Configuration ---
 st.set_page_config(page_title="WEKENI ZA CABBAGE GUYS", layout="centered")
-st.title("SAFARICOM CHAPA DIMBA NYANZA REGION FINALS: Shot Map")
+st.title("SAFARICOM CHAPA DIMBA EASTERN REGION FINALS: Shot Map")
 
 # --- Goal Dimensions & Config ---
 left_post = 41.0
@@ -86,7 +86,7 @@ if st.sidebar.button("Clear Data / Start Fresh"):
 
 # --- Dashboard Visualization Filter ---
 st.subheader("Filter Goal Map")
-view_option = st.radio("Display Shots For:", ["All Teams","PLATEAU QUEENS", "MASOSA STARLETS", "HEDSO QUEENS", "OTENDO COMPREHENSIVE", "AWENDO FOOTBALL ACADEMY", "KENDU MUSLIM", "OBUNGA FC", "INDOMITABLE SOLDIERS"], horizontal=True)
+view_option = st.radio("Display Shots For:", ["All Teams","Aic Sultan Queen", "MCF Starlets", "The Royal Queens Academy", "Dakabaricha Sec School Football Girls", "Golden Football Academy", "SMPI Academy", "MAFA Academy", "Mbuthani Sec School"], horizontal=True)
 
 # Filter Data based on selection
 if view_option == "All Teams":
